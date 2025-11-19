@@ -1,14 +1,10 @@
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Twitter, Facebook, Instagram, Mail, Phone, MapPin, ArrowUp, Command, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Twitter, Facebook, Instagram, Mail, Phone, MapPin, ArrowUp, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 import portfolioData from '@/data/portfolio';
 import { trackEvent } from '@/utils/analytics';
 
-interface FooterProps {
-  onOpenShortcuts?: () => void;
-}
-
-export default function Footer({ onOpenShortcuts }: FooterProps) {
+export default function Footer() {
   const { personal } = portfolioData;
   const currentYear = new Date().getFullYear();
 
@@ -168,19 +164,6 @@ export default function Footer({ onOpenShortcuts }: FooterProps) {
               >
                 Privacy Policy
               </Link>
-              <button
-                onClick={() => {
-                  if (onOpenShortcuts) {
-                    onOpenShortcuts();
-                    trackEvent('UI', 'Open Shortcuts', 'Footer');
-                  }
-                }}
-                className="text-white/70 text-sm hover:text-white transition-colors flex items-center"
-                aria-label="Keyboard shortcuts"
-              >
-                <Command size={14} className="mr-1" />
-                Shortcuts
-              </button>
             </div>
           </div>
           <div className="flex items-center">

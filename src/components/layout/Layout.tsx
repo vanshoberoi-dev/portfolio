@@ -1,16 +1,15 @@
 // React and third-party imports
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 
 // Components
 import Header from './Header';
 import Footer from './Footer';
 import GlobalAnimatedBackground from './GlobalAnimatedBackground';
-import KeyboardShortcutsDialog from '@/components/ui/KeyboardShortcutsDialog';
+import AIChatbot from '@/components/ui/AIChatbot';
 
 export default function Layout() {
   const location = useLocation();
-  const [isShortcutsOpen, setIsShortcutsOpen] = useState(false);
 
   // Handle route changes
   useEffect(() => {
@@ -27,13 +26,10 @@ export default function Layout() {
       <main className="flex-grow pt-20 relative z-10">
         <Outlet />
       </main>
-      <Footer onOpenShortcuts={() => setIsShortcutsOpen(true)} />
+      <Footer />
 
-      {/* Keyboard Shortcuts Dialog */}
-      <KeyboardShortcutsDialog
-        isOpen={isShortcutsOpen}
-        onClose={() => setIsShortcutsOpen(false)}
-      />
+      {/* AI Chatbot */}
+      <AIChatbot />
     </div>
   );
 }

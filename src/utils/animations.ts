@@ -119,20 +119,31 @@ export const textContainer = {
   },
   visible: (i = 1) => ({
     opacity: 1,
-    transition: { staggerChildren: 0.05, delayChildren: i * 0.1 },
+    transition: {
+      staggerChildren: 0.05,
+      delayChildren: i * 0.1,
+      when: "beforeChildren",
+    },
   }),
 };
 
-// Letter animation for text - balanced timing
+// Letter animation for text - balanced timing with better cross-browser support
 export const textLetter = {
-  hidden: { opacity: 0, y: 15 },
+  hidden: {
+    opacity: 0,
+    y: 15,
+    scale: 0.95,
+  },
   visible: {
     opacity: 1,
     y: 0,
+    scale: 1,
     transition: {
-      type: 'tween',
-      duration: 0.25,
-      ease: 'easeOut',
+      type: 'spring',
+      damping: 20,
+      stiffness: 200,
+      mass: 0.5,
+      duration: 0.3,
     },
   },
 };

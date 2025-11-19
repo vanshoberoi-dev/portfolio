@@ -21,19 +21,18 @@ interface AnimatedTextProps {
 }
 
 const AnimatedText = ({ text }: AnimatedTextProps) => (
-  <motion.span 
-    variants={textContainer} 
-    initial="hidden" 
-    animate="visible" 
+  <motion.span
+    variants={textContainer}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
     className="inline-block"
-    transition={{ staggerChildren: 0.05 }}
   >
     {Array.from(text).map((letter, index) => (
-      <motion.span 
-        key={index} 
-        variants={textLetter} 
+      <motion.span
+        key={`${letter}-${index}`}
+        variants={textLetter}
         className="inline-block"
-        transition={{ duration: 0.25 }}
       >
         {letter === ' ' ? '\u00A0' : letter}
       </motion.span>

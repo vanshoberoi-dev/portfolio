@@ -1,5 +1,5 @@
 // Service Worker for Portfolio Site
-const CACHE_NAME = 'portfolio-cache-v1';
+const CACHE_NAME = 'portfolio-cache-v4-no-shortcuts';
 
 // Assets to cache on install
 const PRECACHE_ASSETS = [

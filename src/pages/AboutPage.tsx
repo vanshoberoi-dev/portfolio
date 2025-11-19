@@ -80,20 +80,24 @@ export default function AboutPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="card p-6"
               >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                    {edu.degree}
-                  </h3>
-                  <span className="text-sm font-medium text-gray-500 dark:text-gray-400 mt-1 md:mt-0">
-                    {edu.startDate} - {edu.endDate}
-                  </span>
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                      {edu.degree}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      {edu.institution}
+                    </p>
+                  </div>
+                  <div className="text-right mt-2 md:mt-0 md:ml-4">
+                    <span className="text-sm font-medium text-gray-500 dark:text-gray-400 block">
+                      {edu.startDate} - {edu.endDate}
+                    </span>
+                    <span className="text-sm text-gray-500 dark:text-gray-400 block mt-1">
+                      {edu.location}
+                    </span>
+                  </div>
                 </div>
-                <p className="text-gray-600 dark:text-gray-400 mb-2">
-                  {edu.institution}
-                </p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  {edu.location}
-                </p>
                 {edu.gpa && (
                   <div className="flex items-center mt-3">
                     <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -115,7 +119,7 @@ export default function AboutPage() {
       {/* Leadership Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <SectionHeading title="Professional & Volunteer Experience" />
+          <SectionHeading title="Voluntary & Other Experiences" />
           <div className="space-y-4">
             {leadership.map((item, index) => (
               <motion.div

@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, FileText, Search } from 'lucide-react';
+import { Menu, X, ChevronDown, FileText } from 'lucide-react';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button, LinkButton } from '@/components/ui/Button';
-import SearchDialog from '@/components/ui/SearchDialog';
-import { trackEvent } from '@/utils/analytics';
 
 const navItems = [
   { name: 'Home', path: '/' },
@@ -18,7 +16,6 @@ const navItems = [
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -93,16 +90,6 @@ export default function Header() {
           })}
 
           <div className="ml-4 flex items-center space-x-3">
-            <button
-              onClick={() => {
-                setIsSearchOpen(true);
-                trackEvent('Navigation', 'Search Open', 'Header');
-              }}
-              className="p-2 rounded-md text-dark-300 dark:text-light-300 hover:bg-light-300/50 dark:hover:bg-dark-200/50 transition-colors"
-              aria-label="Search"
-            >
-              <Search size={18} />
-            </button>
             <ThemeToggle />
             <LinkButton
               variant="outline"
@@ -126,16 +113,6 @@ export default function Header() {
 
         {/* Mobile Navigation Toggle */}
         <div className="flex items-center md:hidden space-x-4">
-          <button
-            onClick={() => {
-              setIsSearchOpen(true);
-              trackEvent('Navigation', 'Search Open', 'Mobile Header');
-            }}
-            className="p-2 rounded-md text-dark-300 dark:text-light-300 hover:bg-light-300/50 dark:hover:bg-dark-200/50 transition-colors"
-            aria-label="Search"
-          >
-            <Search size={18} />
-          </button>
           <ThemeToggle />
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -203,12 +180,6 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Search Dialog */}
-      <SearchDialog
-        isOpen={isSearchOpen}
-        onClose={() => setIsSearchOpen(false)}
-      />
     </header>
   );
 }

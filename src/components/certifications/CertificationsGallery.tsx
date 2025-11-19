@@ -77,6 +77,16 @@ const certifications: Certification[] = [
     skills: ['OpenCV', 'Machine Learning', 'Computer Vision', 'HaarCascades'],
     description: 'Engineered a face-based sports person classifier using HaarCascades and wavelet transforms, achieving 84.31% accuracy with Logistic Regression after systematic hyperparameter optimization.'
   },
+  {
+    id: 'cert-7',
+    title: 'SQL 5-Star Rating',
+    issuer: 'HackerRank',
+    date: '2024',
+    image: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80',
+    link: 'https://www.hackerrank.com/',
+    skills: ['SQL', 'Database', 'Query Optimization', 'Data Analysis'],
+    description: 'Achieved 5-Star rating in SQL on HackerRank, demonstrating proficiency in complex queries, joins, subqueries, and database optimization techniques.'
+  },
 ];
 
 const CertificationsGallery = () => {
