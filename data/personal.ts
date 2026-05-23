@@ -2,7 +2,7 @@ export const personal = {
   name: "Vansh Oberoi",
   role: "Software Developer · Sitecore + Next.js · AI/ML",
   tagline:
-    "Software developer building enterprise CMS, full-stack apps, and AI-powered automations. Currently shipping with Sitecore + Next.js + .NET.",
+    "Software developer building enterprise level full-stack apps, and Generative AI-powered automations. Currently shipping with Sitecore + Next.js + .NET.",
   status: "Open to opportunities",
   location: "Kapurthala, Punjab, India",
   email: "vanshoberoi462@gmail.com",
