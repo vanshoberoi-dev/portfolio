@@ -1,147 +1,41 @@
-# Dependencies
-node_modules
-.pnp
-.pnp.js
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Build outputs
-dist
-dist-ssr
-build
-out
-.next
-.nuxt
-.cache
-.parcel-cache
-.vite
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# Logs
-logs
-*.log
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+.pnpm-debug.log*
 
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-*.local
+# env files (can opt-in for committing if needed)
+.env*
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-*.swp
-*.swo
-*.sw?
-*~
-
-# OS generated files
-.DS_Store
-.DS_Store?
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Windows
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-
-# Temporary files
-*.tmp
-*.temp
-.temp
-.tmp
-
-# Coverage and testing
-coverage
-.nyc_output
-.coverage
-jest_coverage
-
-# Package managers (keep lock files for production)
-# package-lock.json
-# yarn.lock
-# pnpm-lock.yaml
-
-# Misc
-*.tgz
-*.tar.gz
-.eslintcache
-.stylelintcache
-
-# Development and testing files (keep tests)
-# *.test.js
-# *.test.ts
-# *.test.tsx
-# *.spec.js
-# *.spec.ts
-# *.spec.tsx
-Makefile
-
-# Backup and temporary files
-*.bak
-*.backup
-*.old
-*.orig
-
-# Image optimization cache
-.image-cache
-
-# Analytics and tracking
+# vercel
 .vercel
-.netlify
-.firebase/
-.amplify/
-.serverless/
-.terraform/
 
-# AI/ML specific
-*.pkl
-*.joblib
-*.h5
-*.pb
-models/
-checkpoints/
-__pycache__/
-*.pyc
-
-# Modern dev tools
-.turbo
-.rush
-.nx/
-.swc/
-.tsbuildinfo
-
-# IDE specific
-.fleet/
-.cursor/
-*.code-workspace
-
-# Security
-# .env.example (keep as template)
-*.pem
-*.key
-*.crt
-*.p12
-*.pfx
-secrets/
-auth.json
-service-account.json
-.aws/
-.gcp/
-.azure/
-
-# Performance monitoring
-.lighthouse
-bundle-analyzer-report.html
-
-# Documentation
-/docs/build
-/storybook-static
+# typescript
+*.tsbuildinfo
+next-env.d.ts
