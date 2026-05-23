@@ -17,7 +17,7 @@ const sawarabi = Sawarabi_Mincho({
   display: "swap",
 });
 
-const siteUrl = "https://vansh-portfolio.vercel.app";
+const siteUrl = "https://portfolio-vob.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
