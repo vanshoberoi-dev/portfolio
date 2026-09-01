@@ -131,6 +131,6 @@ npm install
 cp .env.example .env.local      # add your Web3Forms key
 npm run dev                     # http://localhost:3000
 ```
-All PRs are reviewed by `my self developed`- `pr-review-agent`
+All PRs are reviewed by `my self developed` `pr-review-agent`
 **License** — Code is MIT. Content (copy, project descriptions, design) © 2025 Vansh Oberoi.
 
