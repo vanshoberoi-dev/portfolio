@@ -36,7 +36,7 @@ I build things that go to production — not demos. From RESTful APIs and RAG pi
 | 💼 **Experience** | 2+ years across industry role + 2 internships (AI, ML, full-stack) |
 | 🚀 **Projects** | 15+ shipped — web apps, AI/ML models, automation workflows |
 | 📍 **Location** | Kapurthala, Punjab, India · open to remote & relocation |
-| ✉️ **Reach me** | vanshoberoi462@gmail.com · +91 96465 70760 |
+| ✉️ **Reach me** | vanshoberoi462@gmail.com · +91 9646570760 |
 
 ---
 
